@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+app.use(express.json())
 const tasks = [
     {id:1,name:"Task 1",done:true},
     {id:2,name:"Task 2",done:true},
@@ -24,6 +25,18 @@ app.get('/task/:id', (req, res) => {
         res.status(200).send(task)
     }else{
         res.status(404).json({ "error": `Task ${req.params.id} not found` })
+    }
+})
+
+
+app.post('/tasks', (req, res) => {
+    var task = req.body
+    if(task.title === ""){
+        res.status(400).send({})
+
+    }else{
+        tasks.push(task)
+        res.status(201).send(task)
     }
 })
 
