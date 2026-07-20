@@ -74,13 +74,13 @@ curl -i http://localhost:3000/tasks
 
 ### Output
 
-![Output](curl_request.png)
+![Output](curl_request.PNG)
 ---
 
 ## Swagger Documentation Screenshot
 
 
-![Swagger UI](swagger-ui.png)
+![Swagger UI](swagger-ui.PNG)
 
 
 ---
