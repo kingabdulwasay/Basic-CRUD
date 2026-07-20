@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const swaggerui = require("swagger-ui-express");
 const swaggerspecs = require("./swagger");
 const port = 3000;
+app.use(cors({origin:'*'}))
 app.use(express.json())
 
 const tasks = [
